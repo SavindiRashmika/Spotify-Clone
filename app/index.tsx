@@ -1,10 +1,11 @@
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 import React from 'react'
+import LodingPage from '@/screen/LodingPage'
 
 export default function index() {
   return (
-    <View>
-      <Text>savii rashmika</Text>
+    <View style={{ flex: 1 }}>
+      <LodingPage/>
     </View>
   )
 }
