@@ -42,7 +42,7 @@ const login = StyleSheet.create({
         fontFamily:'Roboto',
         fontWeight:"bold",
         fontSize:25,
-        marginLeft:15
+        marginLeft:16
       },
       input: {
         height: 40,
