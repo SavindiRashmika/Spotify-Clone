@@ -3,13 +3,15 @@ import React from 'react'
 import LodingPage from '@/screen/LodingPage'
 import LoadP from '@/screen/LoadP'
 import LoginPage from '@/screen/LoginPage'
+import CreateAcc from '@/screen/CreateAcc'
 
 export default function index() {
   return (
     <View style={{ flex: 1 }}>
        {/* <LodingPage/> 
        <LoadP/> */}
-      <LoginPage/>
+      {/* <LoginPage/> */}
+      <CreateAcc/>
     </View>
   )
 }
