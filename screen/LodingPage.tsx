@@ -45,7 +45,7 @@ const loading = StyleSheet.create({
       gradient: {
         flex: 1,
         justifyContent: 'center', 
-        alignItems: 'center',
+        alignItems: 'center'
       },
       content:{
         alignItems:'center',
