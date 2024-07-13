@@ -4,14 +4,18 @@ import LodingPage from '@/screen/LodingPage'
 import LoadP from '@/screen/LoadP'
 import LoginPage from '@/screen/LoginPage'
 import CreateAcc from '@/screen/CreateAcc'
+import CreateAccF from '@/screen/CreateAccF'
+import NotificationP from '@/screen/NotificationP'
 
 export default function index() {
   return (
     <View style={{ flex: 1 }}>
-       {/* <LodingPage/> 
-       <LoadP/> */}
+       {/* <LodingPage/>  */}
+      {/*  <LoadP/> */}
       {/* <LoginPage/> */}
-      <CreateAcc/>
+      {/* <CreateAcc/> */}
+      {/* <CreateAccF/> */}
+      <NotificationP/>
     </View>
   )
 }

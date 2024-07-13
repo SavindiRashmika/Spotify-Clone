@@ -1,9 +1,9 @@
-import { View, Text, StyleSheet, Pressable, TextInput} from 'react-native'
+import { View, Text, StyleSheet, Pressable, TextInput } from 'react-native'
 import React from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 import { FontAwesome6 } from '@expo/vector-icons'
 
-export default function CreateAcc() {
+export default function CreateAccF() {
   return (
     <View style={acc.container}>
       <LinearGradient colors={['#040306', '#131624']} style={acc.gradient}>
@@ -14,17 +14,19 @@ export default function CreateAcc() {
         <View style={acc.content}>
             <Text style={acc.text}>What's your email</Text>
             <TextInput style={acc.input}/>
-            <Text style={acc.text1}>You'll need to confirm this email later.</Text>
+            <Text style={acc.text1}>This appears on your Spotify profile.</Text>
+            <Text style={acc.text1}>By tapping  " Create account ", you agree to this Spotify Use.</Text>
         </View>
 
-        <View style={acc.content}>
-            <Text style={acc.text}>Create a password</Text>
-            <TextInput style={acc.input}></TextInput>
-            <Text style={acc.text1}>Use at least 10 characters and 1 or more specal characters.</Text>
+        <View>
+            <Text style={acc.text3}>Terms of Use</Text>
+            <Text style={acc.text1}>To learn more about how Spotify collects,uses,shares and
+                protects your personal data,please see the Spotify Privacy policy.
+            </Text>
         </View>
 
         <Pressable style={acc.log}>
-           <Text style={acc.logT}> Next</Text>
+           <Text style={acc.logT}> Create account</Text>
         </Pressable>
       </LinearGradient>
     </View>
@@ -57,14 +59,14 @@ const acc = StyleSheet.create({
         padding: 10,
       },
       log:{
-        backgroundColor:"#535353",
-        width:100,
+        backgroundColor:"white",
+        width:150,
         borderRadius:25,
         justifyContent: 'center', 
         alignItems: 'center',
         padding:12,
         marginLeft:120,
-        marginTop: 20
+        marginTop: 150
       },
       logT:{
         fontFamily:"Roboto",
@@ -74,7 +76,9 @@ const acc = StyleSheet.create({
         fontFamily:"Roboto",
         fontWeight:"bold",
         color:"white",
-        marginLeft:16
+        marginLeft:16,
+        marginBottom:12,
+        fontSize:12
       },
       text2:{
         fontFamily:"Roboto",
@@ -84,6 +88,15 @@ const acc = StyleSheet.create({
         marginTop:8
       },
       content:{
-        marginTop:30
+        marginTop:25
+      },
+      text3:{
+        fontFamily:"Roboto",
+        fontWeight:"bold",
+        color:"#1DB954",
+        marginLeft:16,
+        marginTop:8,
+        fontSize:16,
+        marginBottom:15
       }
   })
