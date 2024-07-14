@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet,Pressable } from 'react-native'
+import { View, Text, StyleSheet,Pressable, Image} from 'react-native'
 import React from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 
@@ -6,6 +6,7 @@ export default function NotificationP() {
   return (
     <View style={notifi.container}>
       <LinearGradient colors={['#040306', '#131624']} style={notifi.gradient}>
+        <Image  source={require('../assets/images/text-bubble.png')} style={notifi.image}/>
         <Text style={notifi.mainT}>Trun on Notifications</Text>
         <Text style={notifi.text}>Get updates new music,  special
             offers,events and more.
@@ -68,5 +69,11 @@ const notifi = StyleSheet.create({
         color:'white',
         fontWeight:"bold",
         fontSize:14
+      },
+      image:{
+        width:150, 
+        height:110, 
+        borderRadius:25, 
+        marginBottom:20
       }
   })
