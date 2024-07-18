@@ -1,5 +1,5 @@
 
-#Spotify Clone
+# Spotify Clone
 
 <img src="https://github.com/user-attachments/assets/bd024892-dbc3-43b0-b5d9-e6758b131f7e"  width="300" height="600"/>
 <img src="https://github.com/user-attachments/assets/276cba4f-300d-47f1-8dff-ad816f285e2f"  width="300" height="600"/>
