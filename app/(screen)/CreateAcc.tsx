@@ -2,16 +2,17 @@ import { View, Text, StyleSheet, Pressable, TextInput} from 'react-native'
 import React from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 import { FontAwesome6 } from '@expo/vector-icons'
+import { router } from 'expo-router'
 
 export default function CreateAcc() {
   return (
     <View style={acc.container}>
       <LinearGradient colors={['#040306', '#131624']} style={acc.gradient}>
-        <Pressable style={acc.arrow}>
+        <Pressable style={acc.arrow} onPress={()=> router.push('/LodingPage')}>
           <FontAwesome6 name="arrow-left-long" size={24} color="white" />
           <Text style={acc.text2}>Create account</Text>
         </Pressable>
-        <View style={acc.content}>
+        <View>
             <Text style={acc.text}>What's your email</Text>
             <TextInput style={acc.input}/>
             <Text style={acc.text1}>You'll need to confirm this email later.</Text>
@@ -23,7 +24,7 @@ export default function CreateAcc() {
             <Text style={acc.text1}>Use at least 10 characters and 1 or more specal characters.</Text>
         </View>
 
-        <Pressable style={acc.log}>
+        <Pressable style={acc.log} onPress={()=> router.push('/CreateAccF')}>
            <Text style={acc.logT}> Next</Text>
         </Pressable>
       </LinearGradient>
@@ -37,7 +38,8 @@ const acc = StyleSheet.create({
       },
       arrow:{
         margin:20,
-        flexDirection: 'row'
+        flexDirection: 'row',
+        marginVertical:60
       },
       gradient: {
         flex: 1
@@ -63,7 +65,7 @@ const acc = StyleSheet.create({
         justifyContent: 'center', 
         alignItems: 'center',
         padding:12,
-        marginLeft:120,
+        marginHorizontal:150,
         marginTop: 20
       },
       logT:{
@@ -80,10 +82,10 @@ const acc = StyleSheet.create({
         fontFamily:"Roboto",
         fontWeight:"bold",
         color:"white",
-        marginLeft:80,
-        marginTop:8
+        marginLeft:50,
+       fontSize:18
       },
       content:{
-        marginTop:30
+        marginVertical:40
       }
   })

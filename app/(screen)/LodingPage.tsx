@@ -3,6 +3,7 @@ import React from 'react'
 import {LinearGradient} from "expo-linear-gradient"
 import { FontAwesome } from '@expo/vector-icons'
 import { FontAwesome5 } from '@expo/vector-icons';
+import { router } from 'expo-router';
 
 export default function LodingPage() {
   return (
@@ -15,7 +16,7 @@ export default function LodingPage() {
            <Text style={loading.mainT}>Free on Spotify.</Text>
 
           <View style={loading.content1}>
-            <Pressable style={loading.button1}>
+            <Pressable style={loading.button1} onPress={()=>router.push('/CreateAcc')}>
               <Text style={loading.sing}> Sing up free</Text>
             </Pressable>
             <Pressable style={loading.button2}>
@@ -26,7 +27,7 @@ export default function LodingPage() {
               <FontAwesome5 name="facebook" size={24} color="#3b5998" style={{ marginLeft: 15 }}/>
               <Text style={loading.icon}> Continue with Facebook</Text>
             </Pressable>
-            <Pressable style={loading.button3}>
+            <Pressable style={loading.button3} onPress={()=> router.push('/LoginPage')}>
               <Text style={loading.log}> Log in</Text>
             </Pressable>
            </View>
@@ -106,7 +107,8 @@ const loading = StyleSheet.create({
         color: "white",
         fontFamily:"Roboto" ,
         fontWeight:"bold",
-        fontSize:18
+        fontSize:18,
+        marginLeft:50
       },
       content1:{
         marginTop: 100

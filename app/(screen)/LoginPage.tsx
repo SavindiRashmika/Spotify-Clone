@@ -2,6 +2,7 @@ import { View, Text, StyleSheet,TextInput, Pressable } from 'react-native'
 import React from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 import { FontAwesome6 } from '@expo/vector-icons';
+import { router } from 'expo-router';
 
 export default function LoginPage() {
   return (
@@ -19,7 +20,7 @@ export default function LoginPage() {
             <Text style={login.text}>Password</Text>
             <TextInput style={login.input}/>
         </View>
-        <Pressable style={login.log}>
+        <Pressable style={login.log} onPress={()=> router.push('/HomePage')}>
            <Text style={login.logT}> Log in</Text>
         </Pressable>
       </LinearGradient>

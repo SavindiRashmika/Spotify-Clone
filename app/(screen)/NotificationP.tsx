@@ -1,12 +1,13 @@
 import { View, Text, StyleSheet,Pressable, Image} from 'react-native'
 import React from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
+import { router } from 'expo-router'
 
 export default function NotificationP() {
   return (
     <View style={notifi.container}>
       <LinearGradient colors={['#040306', '#131624']} style={notifi.gradient}>
-        <Image  source={require('../assets/images/text-bubble.png')} style={notifi.image}/>
+        <Image source={require('../../assets/images/text-bubble.png')} style={notifi.image}/>
         <Text style={notifi.mainT}>Trun on Notifications</Text>
         <Text style={notifi.text}>Get updates new music,  special
             offers,events and more.
@@ -15,9 +16,9 @@ export default function NotificationP() {
         <Pressable style={notifi.log}>
           <Text style={notifi.logT}> Trun on notifications</Text>
         </Pressable>
-        <Pressable>
+        <Pressable onPress={()=>router.push('/HomePage')}>
           <Text style={notifi.text}> Not now</Text>
-          </Pressable>
+        </Pressable>
       </LinearGradient>
     </View>
   )

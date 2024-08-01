@@ -1,21 +1,24 @@
 import { View } from 'react-native'
 import React from 'react'
-import LodingPage from '@/screen/LodingPage'
-import LoadP from '@/screen/LoadP'
-import LoginPage from '@/screen/LoginPage'
-import CreateAcc from '@/screen/CreateAcc'
-import CreateAccF from '@/screen/CreateAccF'
-import NotificationP from '@/screen/NotificationP'
+import LodingPage from '@/app/(screen)/LodingPage'
+import LoadP from '@/app/(screen)/LoadP'
+import LoginPage from '@/app/(screen)/LoginPage'
+import CreateAcc from '@/app/(screen)/CreateAcc'
+import CreateAccF from '@/app/(screen)/CreateAccF'
+import NotificationP from '@/app/(screen)/NotificationP'
+import ArtistChoose from '@/app/(screen)/ArtistChoose'
+import { Stack } from "expo-router";
 
 export default function index() {
   return (
-    <View style={{ flex: 1 }}>
-       {/* <LodingPage/>  */}
-      {/*  <LoadP/> */}
+     <View style={{ flex: 1 }}>
+       <LodingPage/> 
+       {/* <LoadP/> */}
       {/* <LoginPage/> */}
       {/* <CreateAcc/> */}
       {/* <CreateAccF/> */}
-      <NotificationP/>
-    </View>
+      {/* <NotificationP/> */}
+      {/* <ArtistChoose/> */}
+    </View> 
   )
 }

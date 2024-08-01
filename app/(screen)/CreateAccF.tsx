@@ -2,6 +2,7 @@ import { View, Text, StyleSheet, Pressable, TextInput } from 'react-native'
 import React from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 import { FontAwesome6 } from '@expo/vector-icons'
+import { router } from 'expo-router'
 
 export default function CreateAccF() {
   return (
@@ -25,7 +26,7 @@ export default function CreateAccF() {
             </Text>
         </View>
 
-        <Pressable style={acc.log}>
+        <Pressable style={acc.log} onPress={()=>router.push('/NotificationP')}>
            <Text style={acc.logT}> Create account</Text>
         </Pressable>
       </LinearGradient>
@@ -39,7 +40,8 @@ const acc = StyleSheet.create({
       },
       arrow:{
         margin:20,
-        flexDirection: 'row'
+        flexDirection: 'row',
+        marginVertical:60
       },
       gradient: {
         flex: 1
@@ -65,8 +67,8 @@ const acc = StyleSheet.create({
         justifyContent: 'center', 
         alignItems: 'center',
         padding:12,
-        marginLeft:120,
-        marginTop: 150
+        marginLeft:140,
+        marginTop: 140
       },
       logT:{
         fontFamily:"Roboto",
@@ -78,7 +80,7 @@ const acc = StyleSheet.create({
         color:"white",
         marginLeft:16,
         marginBottom:12,
-        fontSize:12
+        fontSize:15
       },
       text2:{
         fontFamily:"Roboto",
